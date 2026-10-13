@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shenia Karlsson Psicologia</title>
+<meta name="description" content="Shenia Karlsson, psicóloga da diversidade em Lisboa. Terapia online em português e inglês, para pessoas de todo o mundo. Marque, pague e receba o link da consulta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+<style>
+/* Layout: indigo "adire" blocks alternate with a cool paper ground; one bold hero, quiet sections, a booking drawer that does the selling. */
+:root{
+  --paper:#F3F2EE;
+  --surface:#FFFFFF;
+  --ink:#16173A;
+  --ink-2:#45466B;
+  --indigo:#232A6E;
+  --indigo-deep:#151A4A;
+  --on-indigo:#F3F2EE;
+  --on-indigo-2:#BFC3E6;
+  --saffron:#F0A93B;
+  --on-saffron:#16173A;
+  --line:#D9D8E3;
+  --chip:#E7E7F0;
+  --ok:#1E7A4F;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --serif:"Newsreader", "Iowan Old Style", Georgia, serif;
+  --r:18px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1130;--surface:#181B45;--ink:#EDECF4;--ink-2:#B4B6D6;--indigo:#232A6E;--indigo-deep:#0A0C26;
+  --on-indigo:#F3F2EE;--on-indigo-2:#BFC3E6;--saffron:#F3B24E;--on-saffron:#16173A;--line:#2C3066;--chip:#23275A;--ok:#5CC796;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1130;--surface:#181B45;--ink:#EDECF4;--ink-2:#B4B6D6;--indigo:#232A6E;--indigo-deep:#0A0C26;
+  --on-indigo:#F3F2EE;--on-indigo-2:#BFC3E6;--saffron:#F3B24E;--on-saffron:#16173A;--line:#2C3066;--chip:#23275A;--ok:#5CC796;color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.55;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-0.025em}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--saffron)}
+.on-indigo .eyebrow{color:var(--on-indigo-2)}
+.lead{font-family:var(--serif);font-size:clamp(19px,2vw,22px);line-height:1.55;color:var(--ink-2);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease, background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--saffron);color:var(--on-saffron)}
+.btn-dark{background:var(--indigo);color:var(--on-indigo)}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn svg{width:18px;height:18px}
+section{scroll-margin-top:84px}
+
+/* HEADER */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
+.brand b{font-size:22px;font-weight:700;letter-spacing:-0.02em}
+.brand span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--ink-2)}
+.lang{font-size:13px;color:var(--ink-2);display:flex;gap:6px}
+.lang button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:6px 4px;min-height:32px}
+.lang button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:12px;width:46px;height:46px;cursor:pointer}
+@media (max-width:980px){
+  .nav-links{display:none;position:absolute;left:0;right:0;top:72px;background:var(--paper);flex-direction:column;align-items:flex-start;padding:16px clamp(16px,4vw,40px) 24px;border-bottom:1px solid var(--line);gap:16px}
+  .nav-links.open{display:flex}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--indigo);color:var(--on-indigo)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:end;padding-block:clamp(56px,8vw,112px) clamp(48px,6vw,88px)}
+@media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(46px,7.2vw,104px);line-height:.95;font-weight:700;letter-spacing:-0.045em;margin-top:22px}
+.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-0.02em;color:var(--saffron)}
+.hero .lead{color:var(--on-indigo-2);margin-top:26px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-photo{position:relative;justify-self:end;width:min(100%,420px)}
+.photo-slot{aspect-ratio:4/5;max-width:100%;border-radius:220px 220px 22px 22px;background:var(--indigo-deep);display:flex;align-items:flex-end;justify-content:center;padding:26px;color:var(--on-indigo-2);font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden}
+.photo-slot.light{background:var(--chip);color:var(--ink-2);border-color:var(--line)}
+.badge-float{position:absolute;left:-24px;bottom:40px;background:var(--surface);color:var(--ink);border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 18px 40px rgba(10,12,38,.28);max-width:260px;font-size:14px;line-height:1.35}
+.badge-float .dot{width:40px;height:40px;border-radius:50%;background:var(--saffron);display:inline-flex;align-items:center;justify-content:center;flex:none;color:var(--on-saffron)}
+@media (max-width:900px){.hero-photo{justify-self:start}.badge-float{left:12px}}
+.hero-facts{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.18)}
+.hero-facts div{padding:22px 18px 26px 0}
+.hero-facts strong{display:block;font-size:clamp(28px,3.4vw,42px);font-weight:700;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.hero-facts span{font-size:14px;color:var(--on-indigo-2)}
+@media (max-width:700px){.hero-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* MARQUEE */
+.marquee{background:var(--saffron);color:var(--on-saffron);overflow:hidden;white-space:nowrap;border-block:1px solid rgba(0,0,0,.08)}
+.marquee-track{display:inline-flex;gap:40px;padding:16px 0;font-weight:600;font-size:18px;animation:slide 48s linear infinite}
+.marquee-track span::after{content:"✦";margin-left:40px;opacity:.6}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* GENERIC SECTION */
+.sec{padding-block:clamp(72px,9vw,128px)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(36px,5vw,64px);line-height:1;font-weight:700;max-width:16ch;margin-top:14px}
+.on-indigo{background:var(--indigo);color:var(--on-indigo)}
+.on-indigo .lead{color:var(--on-indigo-2)}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:rgba(255,255,255,.12);border-radius:var(--r);overflow:hidden}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--indigo);padding:30px 26px 34px;display:flex;flex-direction:column;gap:12px}
+.step .n{font-family:var(--serif);font-style:italic;font-size:44px;color:var(--saffron);line-height:1}
+.step > div{display:flex;flex-direction:column;gap:12px}
+.step h3{font-size:21px;font-weight:600;letter-spacing:-0.01em}
+.step p{color:var(--on-indigo-2);font-size:15px}
+.pay-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:36px}
+.pay-row .lbl{font-size:14px;color:var(--on-indigo-2);margin-right:6px}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.pill.hl{background:var(--saffron);color:var(--on-saffron);border-color:transparent}
+.gcal{display:flex;gap:14px;align-items:center;margin-top:20px;font-size:15px;color:var(--on-indigo-2)}
+.gcal svg{flex:none}
+
+/* SERVICES */
+.tabs{display:inline-flex;background:var(--chip);border-radius:999px;padding:5px;gap:4px;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:600;font-size:15px;padding:0 20px;min-height:44px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--indigo);color:var(--on-indigo)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px;transition:border-color .2s ease, transform .2s ease}
+.svc:hover{border-color:var(--indigo);transform:translateY(-3px)}
+.svc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.svc h3{font-size:26px;font-weight:700;letter-spacing:-0.02em}
+.svc .dur{font-size:14px;color:var(--ink-2)}
+.svc p{font-family:var(--serif);font-size:17.5px;color:var(--ink-2);line-height:1.55}
+.prices{display:flex;flex-wrap:wrap;gap:8px}
+.price{background:var(--chip);border-radius:12px;padding:9px 13px;font-size:14px}
+.price b{font-size:17px;font-variant-numeric:tabular-nums}
+.svc .btn{align-self:flex-start;margin-top:auto}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13px;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.svc-note{margin-top:22px;font-size:15px;color:var(--ink-2);display:flex;gap:10px;align-items:flex-start;max-width:80ch}
+.other{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;margin-top:18px}
+.other div{border-top:2px solid var(--ink);padding-top:18px}
+.other h3{font-size:19px;font-weight:600}
+.other p{font-size:15px;color:var(--ink-2);margin-top:6px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(32px,6vw,88px);align-items:start}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+.about-photo .photo-slot{border-radius:22px 22px 220px 220px}
+.quote-big{font-family:var(--serif);font-size:clamp(26px,3vw,38px);line-height:1.25;font-style:italic;margin-top:20px}
+.quote-big b{font-style:normal;font-family:var(--display);font-weight:700;letter-spacing:-0.02em}
+.about-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+@media (max-width:600px){.about-cols{grid-template-columns:1fr}}
+.about-cols h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin-bottom:12px}
+.about-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:16px}
+.about-cols li{padding-left:18px;position:relative}
+.about-cols li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--saffron)}
+.refs{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.refs span{font-family:var(--serif);font-style:italic;font-size:17px;background:var(--chip);border-radius:999px;padding:6px 14px}
+
+/* BUSINESS */
+.biz{background:var(--indigo-deep);color:var(--on-indigo)}
+.biz .lead{color:var(--on-indigo-2)}
+.biz-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px}
+.biz-card{border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:12px;background:rgba(255,255,255,.03)}
+.biz-card h3{font-size:22px;font-weight:600}
+.biz-card p{color:var(--on-indigo-2);font-size:15.5px}
+.biz-card .ico{width:46px;height:46px;border-radius:12px;background:var(--saffron);color:var(--on-saffron);display:inline-flex;align-items:center;justify-content:center}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.topics span{font-size:13px;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;color:var(--on-indigo-2)}
+.biz-form{margin-top:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px;align-items:start;border-top:1px solid rgba(255,255,255,.14);padding-top:48px}
+@media (max-width:900px){.biz-form{grid-template-columns:1fr}}
+.biz-form h3{font-size:clamp(28px,3.2vw,40px);font-weight:700;line-height:1.05}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.form{grid-template-columns:1fr}}
+.form .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-weight:400;font-size:16px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:12px 14px;min-height:50px}
+.biz .field input,.biz .field select,.biz .field textarea{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:var(--on-indigo)}
+.biz .field select option{color:#16173A}
+.field textarea{min-height:110px;resize:vertical}
+.form-ok{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.08);border-radius:14px;padding:16px 18px;font-size:16px}
+
+/* EBOOK */
+.ebook{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,80px);align-items:center}
+@media (max-width:900px){.ebook{grid-template-columns:1fr}}
+.book{aspect-ratio:3/4;max-width:min(100%,360px);margin-inline:auto;width:100%;border-radius:6px 16px 16px 6px;background:var(--indigo);color:var(--on-indigo);position:relative;overflow:hidden;box-shadow:20px 26px 0 -6px var(--saffron), 0 30px 60px rgba(10,12,38,.25);transform:rotate(-3deg);display:flex;flex-direction:column;justify-content:space-between;padding:28px 26px}
+.book canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.book *{position:relative}
+.book small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--on-indigo-2)}
+.book h3{font-size:32px;line-height:1;font-weight:700}
+.book h3 em{font-family:var(--serif);font-weight:400;color:var(--saffron)}
+.ebook-list{list-style:none;padding:0;margin:24px 0 28px;display:flex;flex-direction:column;gap:10px;font-size:16px}
+.ebook-list li{display:flex;gap:10px}
+.ebook-list svg{flex:none;margin-top:3px;color:var(--ok)}
+.inline-form{display:flex;flex-wrap:wrap;gap:10px}
+.inline-form input{flex:1 1 200px;min-width:0;font:inherit;font-size:16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 20px;min-height:52px}
+.fine{font-size:13px;color:var(--ink-2);margin-top:12px}
+.ok-msg{display:flex;gap:12px;align-items:center;background:var(--chip);border-radius:16px;padding:16px 18px;font-size:16px}
+.ok-msg svg{color:var(--ok);flex:none}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:980px){.proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.proj-grid{grid-template-columns:1fr}}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px}
+.proj .yr{font-size:13px;font-weight:600;color:var(--ink-2);letter-spacing:.08em;text-transform:uppercase}
+.proj h3{font-size:22px;font-weight:700;line-height:1.15}
+.proj p{font-family:var(--serif);font-size:16.5px;color:var(--ink-2)}
+.proj.feature{grid-column:span 2;background:var(--saffron);color:var(--on-saffron);border-color:transparent}
+.proj.feature p,.proj.feature .yr{color:var(--on-saffron);opacity:.85}
+@media (max-width:600px){.proj.feature{grid-column:auto}}
+
+/* PRESS */
+.press{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+@media (max-width:900px){.press{grid-template-columns:1fr}}
+.press-list{list-style:none;margin:0;padding:0}
+.press-list li{border-top:1px solid var(--line)}
+.press-list li:last-child{border-bottom:1px solid var(--line)}
+.press-list a{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:16px;align-items:center;padding:18px 0;text-decoration:none}
+.press-list .y{font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:15px}
+.press-list b{font-size:18px;font-weight:600;display:block}
+.press-list span.o{font-size:14px;color:var(--ink-2)}
+.press-list a:hover b{text-decoration:underline;text-underline-offset:4px}
+.outlets{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;margin-top:18px}
+.outlets span{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-style:italic;color:var(--ink)}
+.outlets span:nth-child(even){font-family:var(--display);font-style:normal;font-weight:700;letter-spacing:-0.02em}
+
+/* TESTIMONIALS */
+.testi{position:relative}
+.testi-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(86%,440px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.t-card{scroll-snap-align:start;background:var(--surface);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:22px;color:var(--ink);border:1px solid var(--line)}
+.t-card blockquote{margin:0;font-family:var(--serif);font-size:21px;line-height:1.45}
+.t-card figcaption{margin-top:auto;font-size:14px;color:var(--ink-2)}
+.t-nav{display:flex;gap:10px}
+.t-nav button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--on-indigo);background:transparent;color:var(--on-indigo);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px)}
+@media (max-width:900px){.faq{grid-template-columns:1fr}}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;padding:20px 0;font-size:18px;font-weight:600;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--chip);display:inline-flex;align-items:center;justify-content:center;transition:transform .2s ease}
+details[open] summary .pm{transform:rotate(45deg);background:var(--saffron);color:var(--on-saffron)}
+details p{font-family:var(--serif);font-size:17.5px;color:var(--ink-2);padding:0 48px 22px 0;max-width:68ch}
+
+/* CTA + FOOTER */
+.cta{background:var(--saffron);color:var(--on-saffron);border-radius:28px;padding:clamp(36px,6vw,72px);display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:center}
+.cta h2{font-size:clamp(34px,4.6vw,60px);line-height:1;font-weight:700;max-width:14ch}
+.cta p{font-family:var(--serif);font-size:19px;margin-top:12px;max-width:44ch}
+footer{border-top:1px solid var(--line);margin-top:clamp(56px,8vw,96px)}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px;padding-block:56px}
+@media (max-width:860px){.foot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.foot{grid-template-columns:1fr}}
+.foot h4{margin:0 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.legal{border-top:1px solid var(--line);padding-block:20px;font-size:13px;color:var(--ink-2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.copy-mail{display:inline-flex;align-items:center;gap:8px;font-size:15px;background:var(--chip);border:0;border-radius:999px;padding:8px 14px;color:var(--ink);font:inherit;cursor:pointer;margin-top:12px}
+
+/* WHATS FLOAT */
+.float-book{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;box-shadow:0 14px 30px rgba(10,12,38,.3)}
+
+/* BOOKING DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(10,12,38,.55);z-index:60;display:flex;justify-content:flex-end}
+.drawer{width:min(100%,640px);height:100%;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;animation:in .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes in{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+.d-head{padding:20px 24px calc(14px);padding-top:calc(20px + env(safe-area-inset-top,0px));display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);gap:12px}
+.d-head h2{font-size:20px;font-weight:700;letter-spacing:-0.01em}
+.x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.prog{display:flex;gap:6px;padding:14px 24px 0}
+.prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.prog i.on{background:var(--indigo)}
+:root[data-theme="dark"] .prog i.on{background:var(--saffron)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .prog i.on{background:var(--saffron)}}
+.d-body{flex:1;overflow-y:auto;padding:22px 24px 28px;display:flex;flex-direction:column;gap:18px}
+.d-body h3{font-size:28px;font-weight:700;line-height:1.1}
+.d-foot{border-top:1px solid var(--line);padding:16px 24px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.d-foot .sum{font-size:14px;color:var(--ink-2);min-width:0}
+.d-foot .sum b{display:block;color:var(--ink);font-size:18px;font-variant-numeric:tabular-nums}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;cursor:pointer;color:var(--ink);font:inherit;min-height:64px}
+.opt[aria-checked="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.opt b{display:block;font-size:17px}
+.opt small{font-size:14px;color:var(--ink-2)}
+.opt .pr{font-weight:700;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tz{display:flex;gap:10px;align-items:center;background:var(--chip);border-radius:12px;padding:12px 14px;font-size:14px}
+.days{display:grid;grid-auto-flow:column;grid-auto-columns:72px;gap:8px;overflow-x:auto;padding-bottom:6px}
+.day{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:14px;padding:10px 4px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;font:inherit;min-height:76px}
+.day small{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2)}
+.day b{font-size:22px}
+.day[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);color:var(--on-indigo)}
+.day[aria-pressed="true"] small{color:var(--on-indigo-2)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.slot{min-height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums}
+.slot[aria-pressed="true"]{background:var(--saffron);border-color:var(--saffron);color:var(--on-saffron)}
+.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.pm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (max-width:340px){.pm-grid{grid-template-columns:1fr}}
+.pm-opt{display:flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;color:var(--ink);font:inherit;font-weight:600;min-height:56px;text-align:left}
+.pm-opt small{display:block;font-weight:400;font-size:12.5px;color:var(--ink-2)}
+.pm-opt[aria-checked="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.pm-logo{width:38px;height:26px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex:none;letter-spacing:-.02em}
+.pay-panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.qr{width:180px;height:180px;max-width:100%;align-self:center;border-radius:10px;background:#fff;padding:10px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+.check input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--indigo)}
+.done{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.done-ico{width:68px;height:68px;border-radius:50%;background:var(--ok);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.receipt{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 18px}
+.receipt div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.receipt div:last-child{border-bottom:0}
+.receipt span{color:var(--ink-2)}
+.receipt b{text-align:right}
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;width:100%}
+.timeline li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.timeline li i{width:26px;height:26px;border-radius:50%;background:var(--chip);display:inline-flex;align-items:center;justify-content:center;flex:none;font-style:normal;font-size:13px;color:var(--ok)}
+.spinner{width:22px;height:22px;border-radius:50%;border:3px solid currentColor;border-right-color:transparent;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.demo-tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:var(--chip);padding:4px 10px;border-radius:999px}
+.hero .eyebrow{color:var(--on-indigo-2)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+
+/* ---------- MOBILE ---------- */
+@media (max-width:700px){
+  body{font-size:16px}
+  .sec{padding-block:64px}
+  .sec-head{margin-bottom:32px}
+  .nav{min-height:64px}
+  .nav-links{top:64px;max-height:calc(100dvh - 64px);overflow-y:auto}
+  .nav-links a{font-size:18px;padding:6px 0;width:100%}
+  .nav-links .btn{width:100%}
+  .brand b{font-size:20px}
+
+  .hero-inner{padding-block:40px 32px;gap:32px}
+  .hero h1{font-size:clamp(40px,11.5vw,54px);margin-top:16px}
+  .hero .lead{font-size:18px;margin-top:18px}
+  .hero-ctas{flex-direction:column;margin-top:26px}
+  .hero-ctas .btn{width:100%}
+  .hero-photo{width:100%;justify-self:stretch}
+  .photo-slot{aspect-ratio:auto;height:300px;border-radius:160px 160px 20px 20px}
+  .badge-float{left:12px;right:12px;bottom:14px;max-width:none}
+  .hero-facts div{padding:18px 12px 20px 0}
+
+  .step{flex-direction:row;align-items:flex-start;gap:16px;padding:22px 18px}
+  .step .n{font-size:34px;min-width:26px}
+  .step h3{font-size:19px}
+  .step > div{display:flex;flex-direction:column;gap:6px}
+  .pay-row{margin-top:28px}
+  .pay-row .lbl{width:100%;margin:0 0 2px}
+
+  .tabs{width:100%}
+  .tabs button{flex:1;padding:0 12px}
+  .svc{padding:22px}
+  .svc h3{font-size:23px}
+  .svc .btn{width:100%;align-self:stretch}
+  .svc p{font-size:16.5px}
+
+  .about-photo .photo-slot{height:280px;border-radius:20px 20px 160px 160px}
+  .about-cols{margin-top:28px}
+
+  .biz-card{padding:22px}
+  .biz-form{margin-top:36px;padding-top:36px;gap:24px}
+  #bizOut .btn{width:100%}
+
+  .book{max-width:240px;box-shadow:12px 16px 0 -4px var(--saffron), 0 20px 40px rgba(10,12,38,.25)}
+  .book h3{font-size:26px}
+  .inline-form .btn{width:100%}
+
+  .proj{padding:22px}
+  .press-list a{grid-template-columns:48px minmax(0,1fr) auto;gap:12px}
+  .t-card{padding:24px}
+  .t-card blockquote{font-size:19px}
+
+  summary{font-size:17px;padding:18px 0}
+  details p{padding:0 0 20px 0;font-size:16.5px}
+
+  .cta{padding:32px 22px;border-radius:22px}
+  .cta .btn{width:100%}
+  .legal{flex-direction:column}
+
+  /* barra fixa de marcação */
+  .float-book{left:0;right:0;bottom:0;border-radius:0;width:100%;min-height:58px;font-size:17px;
+    padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -8px 24px rgba(10,12,38,.18);
+    transform:translateY(110%);transition:transform .25s ease}
+  .float-book.show{transform:none}
+  .float-book:hover{transform:none}
+  body.has-bar footer{padding-bottom:64px}
+
+  /* painel de marcação em tela cheia */
+  .drawer{width:100%;animation-name:up}
+  .d-head{padding-inline:16px}
+  .d-head h2{font-size:18px}
+  .demo-tag{display:none}
+  .prog{padding-inline:16px}
+  .d-body{padding:18px 16px 24px}
+  .d-body h3{font-size:24px}
+  .d-foot{padding-inline:16px}
+  .d-foot .btn{flex:1}
+  .d-foot .btn[data-back]{flex:0 0 auto}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (min-width:701px){ .float-book.show,.float-book{transform:none} }
+@keyframes up{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Shenia Karlsson, início"><b>Shenia Karlsson</b><span>Psicóloga da Diversidade</span></a>
+    <nav class="nav-links" id="navlinks" aria-label="Principal">
+      <a href="#terapia">Terapia</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#material">E-book grátis</a>
+      <a href="#faq">FAQ</a>
+      <div class="lang" role="group" aria-label="Idioma"><button type="button" aria-pressed="true">PT</button><span aria-hidden="true">·</span><button type="button" aria-pressed="false">EN</button></div>
+      <button type="button" class="btn btn-dark" data-book>Marcar consulta</button>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu" id="menuBtn">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <canvas id="adire" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Terapia online · Português e inglês</span>
+        <h1 id="h1">Um quilombo <em>contemporâneo</em> para cuidar de quem você é.</h1>
+        <p class="lead">Psicoterapia individual, de casal e familiar para pessoas imigrantes, negras, racializadas e LGBTQIA+, onde quer que estejam no mundo. Marque, pague e receba o link da consulta em poucos minutos.</p>
+        <div class="hero-ctas">
+          <button type="button" class="btn btn-primary" data-book>Marcar consulta agora
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <a class="btn btn-ghost" href="#empresas">Sou uma empresa</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-slot" role="img" aria-label="Espaço para retrato da Shenia">[ Retrato da Shenia ]</div>
+        <div class="badge-float"><span class="dot"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>Próxima vaga</b><br><span id="nextSlot">esta semana</span></span></div>
+      </div>
+    </div>
+    <div class="hero-facts">
+      <div><strong>14+</strong><span>anos de prática clínica</span></div>
+      <div><strong>38 mil</strong><span>horas de atendimento</span></div>
+      <div><strong>OPP</strong><span>cédula nº 023817</span></div>
+      <div><strong>EuroPsy</strong><span>certificado europeu</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq">
+  <span>Imigração e adaptação</span><span>Racismo e xenofobia</span><span>Ansiedade e pânico</span><span>Relações inter-raciais</span><span>Luto e perda</span><span>Identidade e diversidade</span><span>Famílias adotivas</span><span>Trauma · EMDR</span><span>Depressão</span><span>Carreira</span>
+</div></div>
+
+<!-- COMO FUNCIONA -->
+<section class="sec on-indigo" id="como" aria-labelledby="h-como">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Como funciona</span><h2 id="h-como">Da marcação à sessão, sem trocar mensagens.</h2></div>
+      <p class="lead" style="max-width:40ch">A agenda está ligada ao Google Agenda da Shenia. O que aparece livre está mesmo livre.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><div><h3>Escolha a consulta</h3><p>Individual, casal, aconselhamento, famílias ou supervisão clínica.</p></div></div>
+      <div class="step"><span class="n">2</span><div><h3>Marque no seu fuso</h3><p>Os horários aparecem já convertidos para o país onde você está.</p></div></div>
+      <div class="step"><span class="n">3</span><div><h3>Pague como preferir</h3><p>MB WAY, Pix, Apple Pay, Google Pay, cartão ou PayPal.</p></div></div>
+      <div class="step"><span class="n">4</span><div><h3>Receba o link</h3><p>Confirmação, link do Google Meet e lembrete chegam por e-mail.</p></div></div>
+    </div>
+    <div class="pay-row">
+      <span class="lbl">Pagamentos aceites</span>
+      <span class="pill hl">MB WAY</span><span class="pill hl">Pix</span><span class="pill">Apple Pay</span><span class="pill">Google Pay</span><span class="pill">Visa · Mastercard</span><span class="pill">PayPal</span>
+    </div>
+    <p class="gcal"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>Cada marcação entra automaticamente no Google Agenda da Shenia, com o link da videochamada já criado.</p>
+  </div>
+</section>
+
+<!-- TERAPIA / SERVIÇOS -->
+<section class="sec" id="terapia" aria-labelledby="h-terapia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Consultas online</span><h2 id="h-terapia">Serviços e valores</h2></div>
+      <div class="tabs" role="tablist" aria-label="Tipo de serviço">
+        <button role="tab" aria-selected="true" aria-controls="tab-voce" id="t1" type="button">Para você</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-prof" id="t2" type="button">Para profissionais</button>
+      </div>
+    </div>
+
+    <div id="tab-voce" role="tabpanel" aria-labelledby="t1">
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="svc-top"><h3>Terapia individual</h3><span class="dur">50 min</span></div>
+          <p>Um espaço de acolhimento, fala, escuta e autoconhecimento. Na primeira consulta traçamos juntas o plano terapêutico, com objetivos e metas.</p>
+          <div class="tags"><span>Ansiedade</span><span>Depressão</span><span>Luto</span><span>Imigração</span><span>Racismo estrutural</span><span>Relações</span></div>
+          <div class="prices"><span class="price"><b>€97</b> sessão</span><span class="price"><b>€194</b> quinzenal · 2</span><span class="price"><b>€388</b> mensal · 4</span></div>
+          <button type="button" class="btn btn-dark" data-book="ind">Marcar</button>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Terapia de casal</h3><span class="dur">60–70 min</span></div>
+          <p>Para casais heteronormativos, homoafetivos e inter-raciais. Identificamos os padrões que geram desconexão e conflitos, para que viver a dois volte a ser parceria.</p>
+          <div class="tags"><span>Comunicação</span><span>Infidelidade</span><span>Parentalidade</span><span>Conflitos culturais</span><span>Separação</span></div>
+          <div class="prices"><span class="price"><b>€107</b> sessão</span><span class="price"><b>€535</b> pacote · 5</span></div>
+          <button type="button" class="btn btn-dark" data-book="cas">Marcar</button>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Aconselhamento</h3><span class="dur">50 min</span></div>
+          <p>Uma consulta pontual para uma decisão que não pode esperar: mudança de carreira, um conflito, uma viagem, a defesa de uma tese.</p>
+          <div class="tags"><span>Projeto de vida</span><span>Carreira</span><span>Decisões</span></div>
+          <div class="prices"><span class="price"><b>€97</b> sessão</span></div>
+          <button type="button" class="btn btn-dark" data-book="ac">Marcar</button>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Famílias que adotam</h3><span class="dur">5 encontros · 60 min</span></div>
+          <p>Terapia sistêmica para famílias que adotam crianças negras, racializadas ou estrangeiras. Como falar de diferença numa sociedade estruturalmente racista e xenófoba?</p>
+          <div class="tags"><span>Adoção</span><span>Famílias inter-raciais</span></div>
+          <div class="prices"><span class="price"><b>€1.207</b> programa completo</span></div>
+          <button type="button" class="btn btn-dark" data-book="fam">Marcar</button>
+        </article>
+      </div>
+      <div class="other">
+        <div><h3>Atendimento emergencial</h3><p>Situações de crise que pedem deslocação. Valor por hora, mais transporte.</p></div>
+        <div><h3>Homecare</h3><p>Para quem tem dificuldade de mobilidade. Valor por hora, mais transporte.</p></div>
+        <div><h3>Atendimento social</h3><p>Valor reduzido ou gratuito para pessoas em risco social, residentes na Europa, mediante análise.</p></div>
+      </div>
+    </div>
+
+    <div id="tab-prof" role="tabpanel" aria-labelledby="t2" hidden>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="svc-top"><h3>Supervisão clínica</h3><span class="dur">50 min</span></div>
+          <p>Para psicólogas e psicólogos que querem atuar numa clínica voltada para a diversidade, com casos reais e epistemologias decoloniais.</p>
+          <div class="tags"><span>Psicanálise</span><span>Teoria sistêmica</span><span>Psicologia decolonial</span><span>Filosofia africana</span><span>Estudos de gênero</span></div>
+          <div class="prices"><span class="price"><b>€98</b> sessão</span><span class="price"><b>€392</b> mensal · 4</span><span class="price">Grupos sob consulta</span></div>
+          <button type="button" class="btn btn-dark" data-book="sup">Marcar</button>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Cursos</h3><span class="dur">Online e presencial</span></div>
+          <p>Em parceria com a Casa Preta: Psicanálise e Racismo, e as obras de Neusa Santos Souza e Isildinha Baptista Nogueira.</p>
+          <div class="prices"><span class="price">Próximas turmas em breve</span></div>
+          <a class="btn btn-ghost" href="#material">Avise-me</a>
+        </article>
+      </div>
+    </div>
+
+    <p class="svc-note"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Remarcação gratuita até 48h antes. Cancelamento com pedido de reembolso até 72h antes. Valores em euro; no Pix o valor é convertido para reais no momento do pagamento.</p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sec" id="sobre" aria-labelledby="h-sobre" style="padding-top:0">
+  <div class="wrap about">
+    <div class="about-photo"><div class="photo-slot light" role="img" aria-label="Espaço para foto da Shenia">[ Foto em consultório ]</div></div>
+    <div>
+      <span class="eyebrow">Sobre a Shenia</span>
+      <h2 id="h-sobre" style="font-size:clamp(36px,5vw,60px);line-height:1;margin-top:14px;font-weight:700">A psicóloga da diversidade.</h2>
+      <p class="quote-big">Racismo, sexismo, xenofobia e homofobia <b>também adoecem.</b> Aqui eles são levados a sério como fonte de sofrimento psíquico.</p>
+      <p class="lead" style="margin-top:22px">Carioca, vive em Lisboa há cerca de oito anos e atende pessoas da diáspora no Brasil e no exterior. Colunista da Revista Raça, do Mundo Negro e da Revista Gerador, a sua prática é interseccional e comprometida com transformações sociais.</p>
+      <div class="refs" aria-label="Referências"><span>Grada Kilomba</span><span>Frantz Fanon</span><span>Ubuntu</span><span>Maya Angelou</span></div>
+      <div class="about-cols">
+        <div><h3>Formação</h3><ul>
+          <li>Certificado Europeu em Psicologia (EuroPsy)</li>
+          <li>Mestrado em Estudos Africanos</li>
+          <li>Pós-graduação em Psicologia Clínica</li>
+          <li>Pós-graduação em Sexologia Clínica (em curso)</li>
+          <li>Terapeuta EMDR licenciada</li>
+        </ul></div>
+        <div><h3>Percurso</h3><ul>
+          <li>Diretora no INMUNE, Instituto da Mulher Negra de Portugal</li>
+          <li>Docente na Casa Preta e no Coletivo Djêjê</li>
+          <li>ONG Postinho, saúde preventiva da mulher</li>
+          <li>Casa Francisco de Assis</li>
+          <li>Hospital Juliano Moreira, moradias terapêuticas (RJ)</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPRESAS -->
+<section class="sec biz" id="empresas" aria-labelledby="h-emp">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow" style="color:var(--on-indigo-2)">Para empresas e instituições</span><h2 id="h-emp">Diversidade que sai do papel.</h2></div>
+      <p class="lead" style="max-width:44ch">Da contratação ao produto que chega ao cliente: políticas de diversidade, inclusão e equidade construídas com quem vive o tema.</p>
+    </div>
+    <div class="biz-grid">
+      <article class="biz-card">
+        <span class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.2-4.5 4-4.5"/></svg></span>
+        <h3>Consultoria em DI&amp;E</h3>
+        <p>Diagnóstico e política interna de diversidade, inclusão e equidade para romper padrões e preconceitos na organização.</p>
+      </article>
+      <article class="biz-card">
+        <span class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h6l2-3 2 6 2-3h4"/></svg></span>
+        <h3>Mediação de conflitos</h3>
+        <p>Programas para equipas, grupos e lideranças, com foco em comunicação e relações de trabalho mais seguras.</p>
+      </article>
+      <article class="biz-card">
+        <span class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+        <h3>Palestras e workshops</h3>
+        <p>Nacionais e internacionais, para empresas e eventos.</p>
+        <div class="topics"><span>Saúde mental da mulher negra</span><span>Bem-estar</span><span>Diversidade</span><span>Empreendedorismo</span><span>Sexualidade</span><span>Empoderamento feminino</span></div>
+      </article>
+      <article class="biz-card">
+        <span class="ico"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM8 7h6"/></svg></span>
+        <h3>Projetos em instituições</h3>
+        <p>Acompanhamento psicológico em pesquisas sensíveis, como no projeto Mulheres do Atlântico Marrom, com a Universidade de Exeter.</p>
+      </article>
+    </div>
+
+    <div class="biz-form">
+      <div>
+        <h3>Peça uma proposta para a sua equipa.</h3>
+        <p class="lead" style="margin-top:14px">Conte o contexto e o formato que procura. A resposta chega em até 2 dias úteis.</p>
+      </div>
+      <form class="form" id="bizForm" novalidate>
+        <label class="field" for="bz-name">Nome<input id="bz-name" name="name" type="text" autocomplete="name" required></label>
+        <label class="field" for="bz-co">Empresa ou instituição<input id="bz-co" name="company" type="text" autocomplete="organization" required></label>
+        <label class="field" for="bz-mail">E-mail<input id="bz-mail" name="email" type="email" autocomplete="email" required></label>
+        <label class="field" for="bz-type">Interesse<select id="bz-type" name="type"><option>Consultoria DI&amp;E</option><option>Mediação de conflitos</option><option>Palestra ou workshop</option><option>Projeto institucional</option></select></label>
+        <label class="field full" for="bz-msg">Mensagem<textarea id="bz-msg" name="msg" placeholder="Tamanho da equipa, datas, objetivos…"></textarea></label>
+        <div class="full" id="bizOut"><button class="btn btn-primary" type="submit">Enviar pedido de proposta</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- EBOOK -->
+<section class="sec" id="material" aria-labelledby="h-ebook">
+  <div class="wrap ebook">
+    <div class="book" aria-hidden="true">
+      <canvas id="adire2"></canvas>
+      <small>E-book gratuito</small>
+      <div><h3>[Título do <em>e-book</em>]</h3><p style="margin-top:12px;font-size:14px;color:var(--on-indigo-2)">Shenia Karlsson</p></div>
+    </div>
+    <div>
+      <span class="eyebrow">Material gratuito</span>
+      <h2 id="h-ebook" style="font-size:clamp(36px,5vw,60px);line-height:1;margin-top:14px;font-weight:700">Comece a cuidar de si hoje.</h2>
+      <p class="lead" style="margin-top:18px">Receba no seu e-mail o e-book da Shenia e, de vez em quando, conteúdos sobre saúde mental, diversidade e imigração.</p>
+      <ul class="ebook-list">
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>[Tema 1 do e-book]</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>[Tema 2 do e-book]</li>
+        <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>[Tema 3 do e-book]</li>
+      </ul>
+      <div id="ebookOut">
+        <form class="inline-form" id="ebookForm" novalidate>
+          <label for="eb-name" class="sr" style="position:absolute;left:-9999px">Nome</label>
+          <input id="eb-name" type="text" placeholder="Seu nome" autocomplete="given-name">
+          <label for="eb-mail" class="sr" style="position:absolute;left:-9999px">E-mail</label>
+          <input id="eb-mail" type="email" placeholder="Seu melhor e-mail" autocomplete="email" required>
+          <button class="btn btn-dark" type="submit">Quero o e-book</button>
+        </form>
+        <p class="fine">Pode cancelar a subscrição quando quiser. Dados tratados segundo o RGPD.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="sec" id="projetos" aria-labelledby="h-proj" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Projetos</span><h2 id="h-proj">Cuidado que vai além do consultório.</h2></div></div>
+    <div class="proj-grid">
+      <article class="proj feature"><span class="yr">Desde 2016 · Brasil e Portugal</span><h3 style="font-size:30px">Papo Preta</h3><p>Fundado com a psicóloga Claudina Damasceno nas comunidades e ONGs do Rio de Janeiro. Saúde mental e bem-estar emocional da população negra da diáspora africana, com uma psicologia crítica que traz para o centro autoras e autores negros.</p></article>
+      <article class="proj"><span class="yr">Lisboa</span><h3>INMUNE</h3><p>No Instituto da Mulher Negra de Portugal, dirige o Departamento de Sororidade e Entreajuda: rodas de conversa, vivências terapêuticas e apoio a vítimas de violência racial.</p></article>
+      <article class="proj"><span class="yr">Universidade de Exeter</span><h3>Mulheres do Atlântico Marrom</h3><p>Pesquisa sobre mobilidade e memória de mulheres negras no Atlântico lusófono, 1711–2011, com apoio psicológico às participantes.</p></article>
+      <article class="proj"><span class="yr">Grupo EMPODERA · White Martins</span><h3>Mentoria para jovens</h3><p>Mentoria e apoio psicológico para jovens periféricos que entram em multinacionais: projeto de vida, competências e carreira.</p></article>
+      <article class="proj"><span class="yr">Europa</span><h3>Atendimento social</h3><p>Consultas a custo reduzido ou gratuitas para pessoas trans, imigrantes, refugiadas e mulheres em situação de violência doméstica.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- IMPRENSA -->
+<section class="sec" id="imprensa" aria-labelledby="h-press" style="padding-top:0">
+  <div class="wrap press">
+    <div>
+      <span class="eyebrow">Na imprensa</span>
+      <h2 id="h-press" style="font-size:clamp(36px,5vw,60px);line-height:1;margin-top:14px;font-weight:700">Uma voz que o mundo ouve.</h2>
+      <div class="outlets" aria-label="Veículos e programas">
+        <span>RTP África</span><span>Revista Raça</span><span>Mundo Negro</span><span>Gerador</span><span>Sem Censura</span><span>Bom Dia Obvious</span><span>Me Sinto Pronta</span><span>Vulneravelmente Falando</span>
+      </div>
+    </div>
+    <ul class="press-list">
+      <li><a href="https://www.rtp.pt/play/p6594/e491825/viva-saude" target="_blank" rel="noopener"><span class="y">2020</span><span><b>Viva Saúde</b><span class="o">RTP África</span></span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a href="https://www.rtp.pt/play/p4269/e335073/bem-vindos/642832" target="_blank" rel="noopener"><span class="y">2020</span><span><b>Bem-Vindos · entrevista</b><span class="o">RTP África</span></span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a href="https://www.rtp.pt/play/p5437/e460037/avenida-marginal" target="_blank" rel="noopener"><span class="y">2020</span><span><b>Avenida Marginal</b><span class="o">RTP Play · podcast</span></span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a href="https://www.rtp.pt/play/p6591/e476470/bem-vindos" target="_blank" rel="noopener"><span class="y">2018</span><span><b>Bem-vindos</b><span class="o">RTP África</span></span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+      <li><a href="https://www.youtube.com/watch?v=Ex3SmT1Xq_w" target="_blank" rel="noopener"><span class="y">Live</span><span><b>Não se procura acolhimento em lugares de opressão</b><span class="o">YouTube</span></span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec on-indigo" aria-labelledby="h-dep">
+  <div class="wrap testi">
+    <div class="sec-head">
+      <div><span class="eyebrow">Depoimentos</span><h2 id="h-dep">Pessoas em todo o mundo.</h2></div>
+      <div class="t-nav"><button type="button" aria-label="Depoimento anterior" id="tPrev"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" aria-label="Próximo depoimento" id="tNext"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="testi-track" id="tTrack" tabindex="0" aria-label="Depoimentos">
+      <figure class="t-card"><blockquote>“Eu descobri qualidades que nem eu sabia que existiam. Nunca pensei que uma experiência dessa fosse tão empoderadora.”</blockquote><figcaption>S., 30 anos · Buenos Aires</figcaption></figure>
+      <figure class="t-card"><blockquote>“Foi a primeira vez que fizemos terapia de casal. Sentimo-nos seguros em expressar preocupações e medos, sem receio de julgamento.”</blockquote><figcaption>G. e S., casal · Polónia e EUA</figcaption></figure>
+      <figure class="t-card"><blockquote>“A imigração quase destruiu os meus sonhos. Pude reconstruir tudo com a ajuda da Shenia.”</blockquote><figcaption>W., 33 anos · Dublin</figcaption></figure>
+      <figure class="t-card"><blockquote>“Ela entrou no meu mundo com uma generosidade ímpar. Posso ser quem eu realmente sou.”</blockquote><figcaption>L., 28 anos · Roma</figcaption></figure>
+      <figure class="t-card"><blockquote>“Uma profissional muito assertiva: estimula estratégias para os meus desafios e respeita os meus limites.”</blockquote><figcaption>R., 36 anos · Dubai</figcaption></figure>
+      <figure class="t-card"><blockquote>“Ela tem-me desafiado e posso realmente abrir-me sem pensar no julgamento.”</blockquote><figcaption>A., 22 anos · Lisboa</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" aria-labelledby="h-faq">
+  <div class="wrap faq">
+    <div>
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 id="h-faq" style="font-size:clamp(36px,5vw,60px);line-height:1;margin-top:14px;font-weight:700">Antes de marcar.</h2>
+      <p class="lead" style="margin-top:18px">Ficou alguma dúvida? Escreva para contato@sheniakarlsson.com.</p>
+    </div>
+    <div>
+      <details open><summary>Vivo fora da Europa. Posso ser atendida(o)?<span class="pm" aria-hidden="true">+</span></summary><p>Sim. As consultas são em português ou inglês, para pessoas em qualquer país. A agenda mostra os horários já no seu fuso.</p></details>
+      <details><summary>Quais são as formas de pagamento?<span class="pm" aria-hidden="true">+</span></summary><p>MB WAY, Pix, Apple Pay, Google Pay, cartão Visa ou Mastercard e PayPal. O pagamento é feito no momento da marcação e a vaga fica garantida assim que é confirmado.</p></details>
+      <details><summary>Como recebo o link da consulta?<span class="pm" aria-hidden="true">+</span></summary><p>Logo após o pagamento você recebe um e-mail com a confirmação, o link do Google Meet e um convite para o seu calendário. Antes da sessão chega um lembrete.</p></details>
+      <details><summary>A terapia online dá resultados?<span class="pm" aria-hidden="true">+</span></summary><p>Sim. O método segue as orientações das ordens de psicologia de Portugal e da Europa, e o vínculo terapêutico constrói-se online tal como no presencial.</p></details>
+      <details><summary>Quantas sessões vou precisar?<span class="pm" aria-hidden="true">+</span></summary><p>O tipo de intervenção e a frequência são definidos no fim da primeira consulta de avaliação, de acordo com a sua necessidade.</p></details>
+      <details><summary>Atende só mulheres negras?<span class="pm" aria-hidden="true">+</span></summary><p>Não. A clínica acolhe pessoas de todas as identidades e origens, com um olhar interseccional para grupos considerados não normativos.</p></details>
+      <details><summary>Atende crianças e adolescentes?<span class="pm" aria-hidden="true">+</span></summary><p>Crianças não. Adolescentes dos 12 aos 17 anos são atendidos com termo de consentimento assinado pelos pais, que podem ser chamados às sessões.</p></details>
+      <details><summary>A psicóloga pode receitar medicação?<span class="pm" aria-hidden="true">+</span></summary><p>Não. Quando necessário, há encaminhamento para psiquiatria ou neurologia e acompanhamento em conjunto com a equipa médica.</p></details>
+      <details><summary>Preciso de computador?<span class="pm" aria-hidden="true">+</span></summary><p>Basta um computador ou telemóvel com boa internet, num lugar silencioso e privado.</p></details>
+      <details><summary>Posso oferecer uma consulta a alguém?<span class="pm" aria-hidden="true">+</span></summary><p>Sim. Pague a consulta e indique os dados da pessoa presenteada; ela recebe um código para marcar no horário que preferir.</p></details>
+      <details><summary>Posso cancelar ou remarcar?<span class="pm" aria-hidden="true">+</span></summary><p>Pode remarcar até 48h antes e pedir cancelamento com reembolso até 72h antes. As taxas do meio de pagamento são descontadas do reembolso.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-label="Marcar consulta">
+  <div class="cta">
+    <div><h2>O primeiro passo cabe numa tarde.</h2><p>Escolha o horário, pague como preferir e receba o link da sessão no seu e-mail.</p></div>
+    <button type="button" class="btn btn-dark" data-book>Marcar consulta</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><b>Shenia Karlsson</b><span>Psicóloga da Diversidade · Lisboa</span></a>
+      <p style="margin-top:14px;font-size:15px;color:var(--ink-2)">Membro efetivo da Ordem dos Psicólogos Portugueses, cédula nº 023817. European Certificate in Psychology PT-056972-201907.</p>
+      <button type="button" class="copy-mail" id="copyMail"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span id="mailTxt">contato@sheniakarlsson.com</span></button>
+    </div>
+    <div><h4>Consultas</h4><ul><li><a href="#terapia">Serviços e valores</a></li><li><a href="#" data-book>Marcar consulta</a></li><li><a href="#faq">Perguntas frequentes</a></li><li><a href="#material">E-book grátis</a></li></ul></div>
+    <div><h4>Shenia</h4><ul><li><a href="#sobre">Sobre</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#imprensa">Imprensa</a></li><li><a href="#empresas">Para empresas</a></li><li><a href="#">Blog</a></li></ul></div>
+    <div><h4>Siga</h4><ul><li><a href="https://www.instagram.com/shenia_karlsson/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://pt.linkedin.com/in/sheniakarlsson" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.youtube.com/channel/UCfzRaJpLPeGwrUa16zMZa8g" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.facebook.com/sheniakarlsson/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+  </div>
+  <div class="wrap legal"><span>© 2026 Shenia Karlsson</span><span><a href="#">Política de privacidade (RGPD)</a> · <a href="#">Cancelamento e remarcação</a> · <a href="#">Parcerias</a></span></div>
+</footer>
+
+<button type="button" class="btn btn-primary float-book" data-book>Marcar consulta</button>
+
+<!-- BOOKING DRAWER -->
+<div class="overlay" id="overlay" hidden>
+  <div class="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <div class="d-head"><h2 id="dTitle">Marcar consulta</h2><span class="demo-tag">Demonstração</span><button type="button" class="x" id="dClose" aria-label="Fechar"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="prog" id="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="d-body" id="dBody"></div>
+    <div class="d-foot" id="dFoot"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---------- Adire pattern (indigo resist-dye motifs) ---------- */
+  function drawAdire(canvas, cell){
+    if(!canvas) return;
+    var dpr = Math.min(window.devicePixelRatio||1, 2);
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if(!w||!h) return;
+    canvas.width = w*dpr; canvas.height = h*dpr;
+    var c = canvas.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0);
+    c.clearRect(0,0,w,h);
+    c.strokeStyle = 'rgba(191,195,230,0.32)'; c.fillStyle='rgba(191,195,230,0.32)'; c.lineWidth = 1.4;
+    var cols = Math.ceil(w/cell)+1, rows = Math.ceil(h/cell)+1, k=0;
+    for(var y=0;y<rows;y++) for(var x=0;x<cols;x++){
+      var cx = x*cell+cell/2, cy=y*cell+cell/2, m=(x*7+y*13+k++)%5, r=cell*0.36;
+      c.beginPath();
+      if(m===0){ for(var i=1;i<=3;i++){ c.moveTo(cx+r*i/3,cy); c.arc(cx,cy,r*i/3,0,Math.PI*2);} c.stroke(); }
+      else if(m===1){ for(var a=0;a<8;a++){ var ang=a*Math.PI/4; c.moveTo(cx,cy); c.lineTo(cx+Math.cos(ang)*r,cy+Math.sin(ang)*r);} c.stroke(); }
+      else if(m===2){ for(var dx=-1;dx<=1;dx++)for(var dy=-1;dy<=1;dy++){ c.moveTo(cx+dx*r*0.6+2.2,cy+dy*r*0.6); c.arc(cx+dx*r*0.6,cy+dy*r*0.6,2.2,0,Math.PI*2);} c.fill(); }
+      else if(m===3){ for(var j=-2;j<=2;j++){ c.moveTo(cx-r,cy+j*r/3); c.quadraticCurveTo(cx,cy+j*r/3-r/4,cx+r,cy+j*r/3);} c.stroke(); }
+      else { var s=0; c.moveTo(cx,cy); for(var t=0;t<14;t+=0.3){ s=t/14*r; c.lineTo(cx+Math.cos(t)*s,cy+Math.sin(t)*s);} c.stroke(); }
+    }
+  }
+  function paint(){ drawAdire(document.getElementById('adire'), 92); drawAdire(document.getElementById('adire2'), 56); }
+  paint(); var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(paint,150); });
+
+  /* ---------- Barra fixa de marcação (celular) ---------- */
+  var fb=document.querySelector('.float-book'), hero=document.querySelector('.hero'), ctaBox=document.querySelector('.cta');
+  function barCheck(){
+    var past = hero.getBoundingClientRect().bottom < 0;
+    var atCta = ctaBox && ctaBox.getBoundingClientRect().top < window.innerHeight && ctaBox.getBoundingClientRect().bottom > 0;
+    var show = past && !atCta;
+    fb.classList.toggle('show', show); document.body.classList.toggle('has-bar', past);
+  }
+  window.addEventListener('scroll', barCheck, {passive:true}); barCheck();
+
+  /* ---------- Marquee duplicate ---------- */
+  var mq=document.getElementById('mq'); mq.innerHTML += mq.innerHTML;
+
+  /* ---------- Mobile menu ---------- */
+  var mb=document.getElementById('menuBtn'), nl=document.getElementById('navlinks');
+  mb.addEventListener('click', function(){ var o=nl.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+  nl.addEventListener('click', function(e){ if(e.target.closest('a')){ nl.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }});
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed', x===b);}); }); });
+
+  /* ---------- Tabs ---------- */
+  var tabs=document.querySelectorAll('[role="tab"]');
+  tabs.forEach(function(t){ t.addEventListener('click', function(){
+    tabs.forEach(function(x){ x.setAttribute('aria-selected', x===t); document.getElementById(x.getAttribute('aria-controls')).hidden = x!==t; });
+  });});
+
+  /* ---------- Testimonials ---------- */
+  var tt=document.getElementById('tTrack');
+  function step(d){ var card=tt.querySelector('.t-card'); tt.scrollBy({left:d*(card.offsetWidth+18), behavior:'smooth'}); }
+  document.getElementById('tPrev').addEventListener('click', function(){step(-1);});
+  document.getElementById('tNext').addEventListener('click', function(){step(1);});
+
+  /* ---------- Copy email ---------- */
+  document.getElementById('copyMail').addEventListener('click', function(){
+    var t=document.getElementById('mailTxt'), v='contato@sheniakarlsson.com';
+    var done=function(){ t.textContent='E-mail copiado'; setTimeout(function(){t.textContent=v;},1600); };
+    try{ navigator.clipboard.writeText(v).then(done, function(){ selectText(t); }); }catch(e){ selectText(t); }
+  });
+  function selectText(el){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  /* ---------- Forms (demo) ---------- */
+  var okIco='<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  document.getElementById('ebookForm').addEventListener('submit', function(e){
+    e.preventDefault(); var m=document.getElementById('eb-mail');
+    if(!m.value || m.value.indexOf('@')<1){ m.focus(); m.setCustomValidity('Escreva um e-mail válido, por exemplo nome@email.com'); m.reportValidity(); m.setCustomValidity(''); return; }
+    document.getElementById('ebookOut').innerHTML='<div class="ok-msg">'+okIco+'<span><b>E-book enviado para '+escapeHtml(m.value)+'.</b><br><span style="color:var(--ink-2);font-size:14px">Demonstração: neste mockup nada é enviado de verdade.</span></span></div>';
+  });
+  document.getElementById('bizForm').addEventListener('submit', function(e){
+    e.preventDefault(); var f=e.target, bad=[].slice.call(f.querySelectorAll('[required]')).filter(function(i){return !i.value.trim();});
+    if(bad.length){ bad[0].focus(); bad[0].setCustomValidity('Preencha este campo'); bad[0].reportValidity(); bad[0].setCustomValidity(''); return; }
+    document.getElementById('bizOut').innerHTML='<div class="form-ok">'+okIco+'<span>Pedido recebido. A Shenia responde em até 2 dias úteis. <span style="opacity:.75">(demonstração)</span></span></div>';
+  });
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+
+  /* ---------- Booking ---------- */
+  var SERVICES=[
+    {id:'ind',name:'Terapia individual',meta:'50 min',price:97},
+    {id:'ind4',name:'Individual · pacote mensal',meta:'4 sessões de 50 min',price:388},
+    {id:'cas',name:'Terapia de casal',meta:'60–70 min',price:107},
+    {id:'ac',name:'Aconselhamento',meta:'50 min · consulta pontual',price:97},
+    {id:'fam',name:'Famílias que adotam',meta:'5 encontros de 60 min',price:1207},
+    {id:'sup',name:'Supervisão clínica',meta:'50 min · para profissionais',price:98}
+  ];
+  var LISBON_SLOTS=[9,10.5,14,17,19]; // horários da Shenia em Lisboa
+  var tz; try{ tz=Intl.DateTimeFormat().resolvedOptions().timeZone; }catch(e){ tz='Europe/Lisbon'; }
+  var tzLabel = (tz||'').split('/').pop().replace(/_/g,' ');
+  var EUR_BRL=6.2; // ilustrativo
+  var S={step:1,svc:null,day:0,slot:null,pm:'card',name:'',email:'',agree:false,paying:false,pixShown:false,mbSent:false,phone:''};
+  var days=buildDays();
+
+  function lisbonOffsetMin(d){ // Lisboa: UTC+1 no verão (até último domingo de out.), UTC+0 no inverno
+    var y=d.getUTCFullYear();
+    var endS=lastSunday(y,9), startS=lastSunday(y,2);
+    return (d>=startS && d<endS)?60:0;
+  }
+  function lastSunday(y,m){ var d=new Date(Date.UTC(y,m+1,0,1)); d.setUTCDate(d.getUTCDate()-d.getUTCDay()); return d; }
+  function buildDays(){
+    var out=[], d=new Date(); d.setHours(12,0,0,0); d.setDate(d.getDate()+1);
+    while(out.length<10){
+      var wd=d.getDay();
+      if(wd!==0 && wd!==6){
+        var slots=LISBON_SLOTS.map(function(h,i){
+          var base=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate(),Math.floor(h),(h%1)*60));
+          var utc=new Date(base.getTime()-lisbonOffsetMin(base)*60000);
+          var busy=((d.getDate()*3+i*5)%7)<2;
+          return {utc:utc,busy:busy,label:utc.toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'})};
+        });
+        out.push({date:new Date(d),slots:slots});
+      }
+      d.setDate(d.getDate()+1);
+    }
+    return out;
+  }
+  function fmtDay(d,opt){ return d.toLocaleDateString('pt-PT',opt); }
+  function svc(){ return SERVICES.filter(function(s){return s.id===S.svc;})[0]; }
+  function eur(n){ return '€'+n.toLocaleString('pt-PT'); }
+  function whenText(){ var dd=days[S.day]; if(S.slot===null) return ''; var sl=dd.slots[S.slot]; return fmtDay(sl.utc,{weekday:'long',day:'numeric',month:'long'})+' · '+sl.label; }
+
+  // next free slot in hero
+  (function(){ for(var i=0;i<days.length;i++){ for(var j=0;j<days[i].slots.length;j++){ if(!days[i].slots[j].busy){ var s=days[i].slots[j]; document.getElementById('nextSlot').textContent=fmtDay(s.utc,{weekday:'short',day:'numeric',month:'short'})+' às '+s.label; return; } } } })();
+
+  var ov=document.getElementById('overlay'), body=document.getElementById('dBody'), foot=document.getElementById('dFoot'), lastFocus=null;
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('[data-book]'); if(!b) return;
+    e.preventDefault(); lastFocus=b;
+    S=Object.assign(S,{step:1,svc:b.getAttribute('data-book')||null,slot:null,paying:false,pixShown:false,mbSent:false,agree:false});
+    if(S.svc) S.step=2;
+    ov.hidden=false; document.body.style.overflow='hidden'; render();
+    setTimeout(function(){ document.getElementById('dClose').focus(); },50);
+  });
+  function close(){ ov.hidden=true; document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+  document.getElementById('dClose').addEventListener('click', close);
+  ov.addEventListener('click', function(e){ if(e.target===ov) close(); });
+  ov.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+
+  var arrow='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var back='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
+  var PMS=[
+    {id:'mbway',name:'MB WAY',note:'Portugal',bg:'#D60510',fg:'#fff',lg:'MB'},
+    {id:'pix',name:'Pix',note:'Brasil · valor em R$',bg:'#32BCAD',fg:'#063',lg:'PIX'},
+    {id:'card',name:'Cartão',note:'Visa, Mastercard',bg:'#232A6E',fg:'#fff',lg:'CARD'},
+    {id:'apple',name:'Apple Pay',note:'iPhone e Mac',bg:'#000',fg:'#fff',lg:'Pay'},
+    {id:'google',name:'Google Pay',note:'Android',bg:'#fff',fg:'#333',lg:'G Pay'},
+    {id:'paypal',name:'PayPal',note:'200+ países',bg:'#003087',fg:'#fff',lg:'PP'}
+  ];
+
+  function render(){
+    [].forEach.call(document.querySelectorAll('#prog i'),function(i,ix){ i.className = ix<S.step?'on':''; });
+    var s=svc(), h='', f='';
+    if(S.step===1){
+      h+='<h3>Que consulta procura?</h3><div role="radiogroup" aria-label="Consulta" style="display:flex;flex-direction:column;gap:10px">';
+      SERVICES.forEach(function(x){ h+='<button type="button" class="opt" role="radio" aria-checked="'+(S.svc===x.id)+'" data-svc="'+x.id+'"><span><b>'+x.name+'</b><small>'+x.meta+'</small></span><span class="pr">'+eur(x.price)+'</span></button>'; });
+      h+='</div>';
+      f='<span class="sum">'+(s?'<b>'+eur(s.price)+'</b>'+s.name:'Escolha uma consulta')+'</span><button type="button" class="btn btn-dark" data-next '+(s?'':'disabled style="opacity:.45;cursor:not-allowed"')+'>Continuar '+arrow+'</button>';
+    }
+    else if(S.step===2){
+      var dd=days[S.day];
+      h+='<h3>Escolha dia e horário</h3><div class="tz"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Horários no seu fuso: <b>'+escapeHtml(tzLabel)+'</b>. A agenda vem do Google Agenda da Shenia.</span></div>';
+      h+='<div class="days" role="group" aria-label="Dia">';
+      days.forEach(function(d,i){ h+='<button type="button" class="day" aria-pressed="'+(S.day===i)+'" data-day="'+i+'"><small>'+fmtDay(d.date,{weekday:'short'}).replace('.','')+'</small><b>'+d.date.getDate()+'</b><small>'+fmtDay(d.date,{month:'short'}).replace('.','')+'</small></button>'; });
+      h+='</div><p style="font-weight:600;font-size:15px">'+fmtDay(dd.date,{weekday:'long',day:'numeric',month:'long'})+'</p><div class="slots" role="group" aria-label="Horário">';
+      dd.slots.forEach(function(sl,i){ h+='<button type="button" class="slot" '+(sl.busy?'disabled aria-label="'+sl.label+' ocupado"':'')+' aria-pressed="'+(S.slot===i)+'" data-slot="'+i+'">'+sl.label+'</button>'; });
+      h+='</div>';
+      f='<button type="button" class="btn" style="background:none;color:var(--ink);padding:0 6px" data-back>'+back+' Voltar</button><button type="button" class="btn btn-dark" data-next '+(S.slot!==null?'':'disabled style="opacity:.45;cursor:not-allowed"')+'>Continuar '+arrow+'</button>';
+    }
+    else if(S.step===3){
+      h+='<h3>Os seus dados e pagamento</h3><div style="display:grid;gap:12px">';
+      h+='<label class="field" for="bk-name">Nome<input id="bk-name" type="text" autocomplete="name" value="'+escapeHtml(S.name)+'" placeholder="Como gostaria de ser chamada(o)"></label>';
+      h+='<label class="field" for="bk-mail">E-mail<input id="bk-mail" type="email" autocomplete="email" value="'+escapeHtml(S.email)+'" placeholder="Para receber o link da consulta"></label></div>';
+      h+='<div class="receipt"><div><span>Consulta</span><b>'+s.name+'</b></div><div><span>Quando</span><b>'+whenText()+'</b></div><div><span>Total</span><b>'+eur(s.price)+'</b></div></div>';
+      h+='<p style="font-weight:600;font-size:15px">Forma de pagamento</p><div class="pm-grid" role="radiogroup" aria-label="Forma de pagamento">';
+      PMS.forEach(function(p){ h+='<button type="button" class="pm-opt" role="radio" aria-checked="'+(S.pm===p.id)+'" data-pm="'+p.id+'"><span class="pm-logo" style="background:'+p.bg+';color:'+p.fg+';border:1px solid rgba(0,0,0,.08)">'+p.lg+'</span><span>'+p.name+'<small>'+p.note+'</small></span></button>'; });
+      h+='</div><div class="pay-panel" id="payPanel">'+payPanel(s)+'</div>';
+      h+='<label class="check" for="bk-agree"><input type="checkbox" id="bk-agree" '+(S.agree?'checked':'')+'><span>Li e aceito a política de cancelamento e remarcação e a política de privacidade.</span></label>';
+      var lbl = S.pm==='pix' ? (S.pixShown?'Já paguei':'Gerar código Pix') : S.pm==='mbway' ? (S.mbSent?'A aguardar confirmação…':'Enviar pedido MB WAY') : 'Pagar '+eur(s.price);
+      f='<button type="button" class="btn" style="background:none;color:var(--ink);padding:0 6px" data-back>'+back+' Voltar</button><button type="button" class="btn btn-primary" data-pay>'+(S.paying?'<span class="spinner" aria-hidden="true"></span> A processar':lbl)+'</button>';
+    }
+    else {
+      h+='<div class="done"><span class="done-ico"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Consulta confirmada.</h3><p class="lead" style="font-size:18px">Obrigada'+(S.name?', '+escapeHtml(S.name.split(' ')[0]):'')+'. O pagamento foi recebido e o link da consulta foi enviado para '+(S.email?'<b>'+escapeHtml(S.email)+'</b>':'o seu e-mail')+'.</p>';
+      h+='<div class="receipt"><div><span>Consulta</span><b>'+s.name+'</b></div><div><span>Quando</span><b>'+whenText()+'</b></div><div><span>Pago com</span><b>'+PMS.filter(function(p){return p.id===S.pm;})[0].name+'</b></div><div><span>Link</span><b>meet.google.com/xxx-xxxx-xxx</b></div></div>';
+      h+='<ol class="timeline"><li><i>✓</i><span>Evento criado no Google Agenda da Shenia</span></li><li><i>✓</i><span>Link do Google Meet enviado por e-mail, com convite para o seu calendário</span></li><li><i>✓</i><span>Lembrete automático 24h e 1h antes da sessão</span></li></ol></div>';
+      f='<span class="sum">Demonstração: nenhum pagamento real foi feito.</span><button type="button" class="btn btn-dark" id="dDone">Concluir</button>';
+    }
+    body.innerHTML=h; foot.innerHTML=f; body.scrollTop=0;
+    if(S.step===3 && S.pm==='pix' && S.pixShown) drawQR(document.getElementById('qr'));
+    var dn=document.getElementById('dDone'); if(dn) dn.addEventListener('click', close);
+  }
+  function payPanel(s){
+    if(S.pm==='mbway') return S.mbSent
+      ? '<p style="display:flex;gap:10px;align-items:center"><span class="spinner" aria-hidden="true"></span>Abra a app MB WAY no telemóvel e aceite o pedido de '+eur(s.price)+'.</p>'
+      : '<label class="field" for="bk-phone">Número de telemóvel MB WAY<input id="bk-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+351 9xx xxx xxx" value="'+escapeHtml(S.phone)+'"></label><small style="color:var(--ink-2)">Vai receber um pedido de pagamento na app MB WAY.</small>';
+    if(S.pm==='pix') return S.pixShown
+      ? '<canvas class="qr" id="qr" width="180" height="180" aria-label="Código QR Pix de demonstração" role="img"></canvas><p style="text-align:center"><b>R$ '+(s.price*EUR_BRL).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</b><br><small style="color:var(--ink-2)">Valor ilustrativo de '+eur(s.price)+' convertido. Escaneie no app do seu banco ou use o Pix copia e cola.</small></p>'
+      : '<p>Ao continuar geramos um código Pix com o valor convertido para reais. O código vale por 30 minutos.</p>';
+    if(S.pm==='apple'||S.pm==='google') return '<p>O '+(S.pm==='apple'?'Apple Pay':'Google Pay')+' abre no seu dispositivo para confirmar o pagamento de '+eur(s.price)+'.</p>';
+    if(S.pm==='paypal') return '<p>Vai ser encaminhada(o) para o PayPal para concluir o pagamento de '+eur(s.price)+' e volta aqui automaticamente.</p>';
+    return '<label class="field" for="bk-card">Número do cartão<input id="bk-card" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234"></label><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px"><label class="field" for="bk-exp">Validade<input id="bk-exp" autocomplete="cc-exp" placeholder="MM/AA"></label><label class="field" for="bk-cvc">CVC<input id="bk-cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123"></label></div><small style="color:var(--ink-2)">Campo seguro do Stripe na versão real. Não escreva dados reais nesta demonstração.</small>';
+  }
+  function drawQR(cv){
+    if(!cv) return; var c=cv.getContext('2d'), n=25, sz=160/n; c.fillStyle='#fff'; c.fillRect(0,0,180,180); c.fillStyle='#111';
+    var seed=7; function rnd(){ seed=(seed*9301+49297)%233280; return seed/233280; }
+    for(var y=0;y<n;y++)for(var x=0;x<n;x++){ var fin=(x<7&&y<7)||(x>n-8&&y<7)||(x<7&&y>n-8); if(fin){ var lx=x>n-8?x-(n-7):x, ly=y>n-8?y-(n-7):y; var on=(lx===0||ly===0||lx===6||ly===6)||(lx>1&&lx<5&&ly>1&&ly<5); if(on) c.fillRect(10+x*sz,10+y*sz,sz,sz); } else if(rnd()>.52) c.fillRect(10+x*sz,10+y*sz,sz,sz); }
+  }
+  body.addEventListener('click', function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.dataset.svc){ S.svc=t.dataset.svc; render(); }
+    else if(t.dataset.day){ S.day=+t.dataset.day; S.slot=null; render(); }
+    else if(t.dataset.slot && !t.disabled){ S.slot=+t.dataset.slot; render(); }
+    else if(t.dataset.pm){ keepInputs(); S.pm=t.dataset.pm; S.pixShown=false; S.mbSent=false; render(); }
+  });
+  body.addEventListener('input', function(e){ if(e.target.id==='bk-agree') S.agree=e.target.checked; });
+  body.addEventListener('change', function(e){ if(e.target.id==='bk-agree') S.agree=e.target.checked; });
+  function keepInputs(){ var n=document.getElementById('bk-name'), m=document.getElementById('bk-mail'), p=document.getElementById('bk-phone'); if(n) S.name=n.value; if(m) S.email=m.value; if(p) S.phone=p.value; }
+  foot.addEventListener('click', function(e){
+    var t=e.target.closest('button'); if(!t||t.disabled) return;
+    if(t.hasAttribute('data-next')){ S.step++; render(); }
+    else if(t.hasAttribute('data-back')){ keepInputs(); S.step--; S.pixShown=false; S.mbSent=false; render(); }
+    else if(t.hasAttribute('data-pay')){
+      if(S.paying||S.mbSent) return;
+      keepInputs();
+      var mail=document.getElementById('bk-mail');
+      if(!S.email || S.email.indexOf('@')<1){ mail.focus(); mail.setCustomValidity('Precisamos do seu e-mail para enviar o link da consulta'); mail.reportValidity(); mail.setCustomValidity(''); return; }
+      var ag=document.getElementById('bk-agree'); if(!ag.checked){ ag.focus(); ag.setCustomValidity('Aceite as políticas para continuar'); ag.reportValidity(); ag.setCustomValidity(''); return; }
+      S.agree=true;
+      if(S.pm==='pix' && !S.pixShown){ S.pixShown=true; render(); return; }
+      if(S.pm==='mbway'){ S.mbSent=true; render(); setTimeout(function(){ S.mbSent=false; S.step=4; render(); },2200); return; }
+      S.paying=true; render(); setTimeout(function(){ S.paying=false; S.step=4; render(); },1300);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
